@@ -1,0 +1,111 @@
+/* Alapbeállítások */
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #212529;
+}
+
+/* Bal oldali navigáció */
+
+.sidebar{
+    padding: 25px 20px;
+    border-right: 1px solid #dee2e6;
+    min-height: 85vh;
+}
+
+.sidebar h5{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.sidebar .nav-link{
+    color: #495057;
+    padding: 8px 10px;
+}
+
+.sidebar .nav-link:hover{
+    color: #712cf9;
+}
+
+.sidebar .nav-link.active{
+    color: #712cf9;
+    font-weight: bold;
+}
+
+/* Központi tartalom */
+.content{
+    padding: 40px;
+    background-color: #e8eaeb;
+    border-right: 1px solid #e6dfde;
+}
+
+.content h1{
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.content h2{
+    font-size: 1.5rem;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+/* Kódpélda */
+
+.code-example{
+    background-color: #f1f3f5;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+/* Jobb oldali navigáció */
+
+.right-sidebar{
+    padding: 30px 15px;
+}
+
+.right-sidebar ul{
+    padding-left: 18px;
+}
+
+.right-sidebar li{
+    margin-bottom: 10px;
+}
+
+.right-sidebar a{
+    color: #495057;
+    text-decoration: none;
+}
+
+.right-sidebar a:hover{
+    color: #712cf9;
+}
+
+/* Lábléc */
+
+.footer{
+    border-top: 1px solid #dee2e6;
+    padding: 25px;
+    text-align: center;
+    color: #6c757d;
+}
+
+/* Mobilnézet */
+
+@media (max-width: 991px) {
+    .sidebar{
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .content{
+        padding: 25px 15px;
+    }
+
+    .right-sidebar{
+        border-top: 1px solid #dee2e6;
+    }
+}

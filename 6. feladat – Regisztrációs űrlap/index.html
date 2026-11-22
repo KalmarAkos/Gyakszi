@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+        <fieldset>
+            <legend>Személyes adatok</legend>
+             <label for="lbl_name">Név:</label>
+        <input placeholder="Add meg a neved" type="text" id="lbl_name" name="name" required><br><br>
+
+        <label for="lb_email">Email:</label>
+        <input placeholder="Add meg az email címed" type="email" id="lb_email" name="email" required><br><br>
+
+        <label for="lb_passw">Jelszó:</label>
+        <input placeholder="Add meg a jelszavad" type="password" id="lb_passw" name="password" required><br><br>
+
+        <label for="d_szuldatum">Születési dátum:</label>
+        <input placeholder="Add meg a születési dátumod" type="date" id="d_szuldatum" name="birthdate" required><br><br>
+
+        <label for="lb_eletkor">Életkor:</label>
+        <input min="0" max="150" placeholder="Add meg az életkort" type="number" id="lb_eletkor" name="age" required><br><br>
+        </fieldset>
+
+        <label for="lb_f">Férfi</label>
+        <input type="radio" id="lb_f" name="gender" value="male"><br>
+
+        <label for="lb_n">Nő</label>
+        <input type="radio" id="lb_n" name="gender" value="female"><br>
+
+        <label for="lb_o">Egyéb</label>
+        <input checked="checked" type="radio" id="lb_o" name="gender" value="other"><br><br>
+
+        <label for="lb_erdeklodes">Érdeklődési kör:</label><br>
+        <input type="checkbox" id="lb_erdeklodes1" name="interest" value="sport">Sport<br>
+        <input type="checkbox" id="lb_erdeklodes2" name="interest" value="zene">Zene<br>
+        <input type="checkbox" id="lb_erdeklodes3" name="interest" value="film">Film<br>
+        <input type="checkbox" id="lb_erdeklodes4" name="interest" value="irodalom">Irodalom<br><br>
+
+        <label for="lb_orszag">Ország:</label>
+        <select id="lb_orszag" name="country">
+            <option value="hu">Magyarország</option>
+            <option value="us">USA</option>
+            <option value="de">Németország</option>
+            <option value="fr">Franciaország</option>
+        </select><br><br>
+
+        <label for"lb_megjegyzes">Megjegyzés:</label><br>
+        <textarea placeholder="Add meg a megjegyzésed" id="lb_megjegyzes" name="comment" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Regisztráció">
+        <input type="reset" value="Mégse">
+    </form>
+</body>
+</html>

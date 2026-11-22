@@ -1,0 +1,31 @@
+body {
+    background-color: #777474;
+}
+
+h1 {
+    text-align: center;
+}
+
+.levesek {
+    color:aqua
+}
+
+.foetelek {
+    color: yellow;
+}
+
+.desszertek {
+    color: pink;
+}
+
+.etel {
+    display: flex;
+    justify-content: left;
+    width: 75%;
+    padding: 10px;
+    border: 2px solid rgb(186, 42, 42);
+}
+
+li:hover {
+    color: red;
+}
