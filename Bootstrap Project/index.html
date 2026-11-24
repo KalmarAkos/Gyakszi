@@ -18,118 +18,150 @@
                 <a class="navbar-brand" href="index.html">Bootstrap Magyarul</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#foMenu"
-                    aria-expanded="false" aria-label="Navigáció megnyitása">
+                    aria-controls="foMenu" aria-expanded="false" aria-label="Navigáció megnyitása">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- foMenu -->
+                <!-- foMenu: az id-nek egyeznie kell a data-bs-target="#foMenu" értékével -->
                 <div class="collapse navbar-collapse" id="foMenu">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Kezdőlap</a>
+                            <a class="nav-link active" href="index.html" aria-current="page">Kezdőlap</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#html">HTML</a>
+                            <a class="nav-link" href="#mi-a-bootstrap">HTML</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#css">CSS</a>
+                            <a class="nav-link" href="#fontos-globalok">CSS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#bootstrap">Bootstrap</a>
+                            <a class="nav-link" href="#gyors-kezdes">Bootstrap</a>
                         </li>
                     </ul>
                 </div>
-                <!-- foMenu vége-->
+                <!-- foMenu vége -->
             </div>
         </nav>
     </header>
 
-    <!-- Fő oldalelrendezés -->
+    <!-- Fő oldalelrendezés: col-lg-* → lg törésponttól (992px) három oszlop -->
     <div class="container-fluid">
         <div class="row">
-            <!--  bal oldali menü  -->
+            <!-- Bal oldali menü -->
             <aside class="col-lg-2 sidebar">
                 <h5>Dokumentáció</h5>
                 <nav>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">Bevezetés</a>
+                            <a href="index.html" class="nav-link active" aria-current="page">Bevezetés</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">Telepítés</a>
+                            <a href="#" class="nav-link">Telepítés</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">Elrendezés</a>
+                            <a href="#" class="nav-link">Elrendezés</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">Komponensek</a>
+                            <a href="#" class="nav-link">Komponensek</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">CSS alapok</a>
+                            <a href="#" class="nav-link">CSS alapok</a>
                         </li>
                     </ul>
                 </nav>
             </aside>
 
-            <!-- Központi tartalom-->
+            <!-- Központi tartalom — hivatalos Introduction váz latva magyarul -->
             <main class="col-lg-8 content">
-                <h1>Ismerkedés a Bootsrappel</h1>
-                <p>
-                    A Bootstrap egy ingyenes és nyílt forráskódú frontend keretrendszer.
-                    Segítségével gyorsan készíthetünk reszponzív weboldalakat.
-                </p>
+                <section id="bevezetes">
+                    <h1>Bevezetés</h1>
+                    <p>
+                        A Bootstrap egy hatékony, funkciókban gazdag frontend eszköztár:
+                        előre elkészített stílusokkal és komponensekkel gyorsabban építhetsz
+                        reszponzív weboldalakat.
+                    </p>
+                </section>
+
                 <hr>
-                <h2>Mi az a Bootstrap?</h2>
-                <p>
-                    A Bootstrap előre elkészített CSS osztályokat és JavaScript komponeneseket biztosít a webfejlesztők
-                    számára.
-                </p>
-                <h2>Gyors kezdés</h2>
-                <p>
-                    A Bootstrap használatához először be kell töltenünk a szükséges CSS és JavaScript fájlokat.
-                </p>
-                <div class="code-example">
-                    <code>
-                        &lt;h1&gt;Helló Bootstrap!&lt;/h1&gt;
-                    </code>
-                </div>
-                <h2>Miért használjunk Bootstrapet?</h2>
-                <p>
-                    A Bootstrap haszálatával leegyszerűsödik a Weblap készítés.
-                </p>
+
+                <section id="mi-a-bootstrap">
+                    <h2>Mi az a Bootstrap?</h2>
+                    <p>
+                        A Bootstrap CSS-osztályokat és JavaScript-komponenseket ad
+                        (navbar, collapse, offcanvas, modal stb.). A kinézet nagy része
+                        osztályokkal áll össze; egyes komponensekhez a JS bundle is kell.
+                    </p>
+                </section>
+
+                <section id="gyors-kezdes">
+                    <h2>Gyors kezdés</h2>
+                    <p>Három lépés a hivatalos Get started nyomán:</p>
+                    <ol>
+                        <li>Hozz létre egy HTML-fájlt (<code>DOCTYPE</code>, <code>lang</code>, viewport).</li>
+                        <li>Töltsd be a Bootstrap CSS-t a <code>&lt;head&gt;</code>-ben (CDN + <code>integrity</code>).</li>
+                        <li>A <code>&lt;/body&gt;</code> előtt add hozzá a <code>bootstrap.bundle.min.js</code> fájlt (Popper benne van).</li>
+                    </ol>
+                    <div class="code-example">
+                        <code>&lt;h1&gt;Helló, világ!&lt;/h1&gt;</code>
+                    </div>
+                </section>
+
+                <section id="fontos-globalok">
+                    <h2>Fontos globális beállítások</h2>
+                    <p>
+                        A Bootstrap a <strong>Reboot</strong> réteggel egységesíti az alapstílusokat,
+                        és globálisan <code>box-sizing: border-box</code>-ot állít be.
+                        Így a szélesség a paddingot és a keretet is tartalmazza — kiszámíthatóbb a layout.
+                        A saját <code>CSS/style.css</code> a Bootstrap CSS <em>után</em> töltődik be, ezért tudsz felülírni.
+                    </p>
+                </section>
+
+                <section id="js-komponensek">
+                    <h2>JavaScript-komponensek</h2>
+                    <p>
+                        A felső menü hamburger gombja <code>data-bs-toggle="collapse"</code> és
+                        <code>data-bs-target="#foMenu"</code> párossal működik: a target a
+                        <code>id="foMenu"</code> elemre mutat. Ugyanez a minta később offcanvashez és modalhoz is kell.
+                    </p>
+                </section>
             </main>
 
-            <!-- Jobb oldali navigáció-->
+            <!-- Jobb oldali navigáció — horgonyok a szakasz-id-kre -->
             <aside class="col-lg-2 right-sidebar">
                 <h6>Ezen az oldalon</h6>
                 <ul>
                     <li>
-                        <a href="#">Ismerkedés</a>
+                        <a href="#bevezetes">Bevezetés</a>
                     </li>
                     <li>
-                        <a href="#">Mi az a Bootstrap?</a>
+                        <a href="#mi-a-bootstrap">Mi az a Bootstrap?</a>
                     </li>
                     <li>
-                        <a href="#">Gyors kezdés</a>
+                        <a href="#gyors-kezdes">Gyors kezdés</a>
+                    </li>
+                    <li>
+                        <a href="#fontos-globalok">Fontos globálok</a>
+                    </li>
+                    <li>
+                        <a href="#js-komponensek">JS-komponensek</a>
                     </li>
                 </ul>
             </aside>
         </div>
     </div>
 
-    <!-- Lábléc -->
-    <footer class="footer">
-        <p>Bootstrap Magyar Dokumentáció</p>
+    <!-- Lábléc: text-center = Bootstrap utility (kevesebb saját CSS) -->
+    <footer class="footer text-center">
+        <p class="mb-0">Bootstrap Magyar Dokumentáció</p>
     </footer>
 
-    <!-- Bootstrap JavaScript -->
+    <!-- Bootstrap JavaScript (bundle = Popper + komponensek) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
         crossorigin="anonymous"></script>
 
-    <!-- Saját JavaScript -->
+    <!-- Saját JavaScript (egyelőre üres — későbbi leckékhez) -->
     <script src="JS/main.js"></script>
-
 
 </body>
 

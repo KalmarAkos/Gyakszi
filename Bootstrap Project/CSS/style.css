@@ -1,51 +1,53 @@
-/* Alapbeállítások */
+/* Alapbeállítások
+   A Bootstrap Reboot már beállítja: box-sizing: border-box az összes elemre.
+   A saját CSS a Bootstrap CDN *után* töltődik — így tudsz felülírni. */
 
-body{
-    font-family: Arial, sans-serif;
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background-color: #ffffff;
     color: #212529;
 }
 
 /* Bal oldali navigáció */
 
-.sidebar{
+.sidebar {
     padding: 25px 20px;
     border-right: 1px solid #dee2e6;
     min-height: 85vh;
 }
 
-.sidebar h5{
+.sidebar h5 {
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-.sidebar .nav-link{
+.sidebar .nav-link {
     color: #495057;
     padding: 8px 10px;
 }
 
-.sidebar .nav-link:hover{
+.sidebar .nav-link:hover {
     color: #712cf9;
 }
 
-.sidebar .nav-link.active{
+.sidebar .nav-link.active {
     color: #712cf9;
     font-weight: bold;
 }
 
 /* Központi tartalom */
-.content{
+.content {
     padding: 40px;
     background-color: #e8eaeb;
     border-right: 1px solid #e6dfde;
 }
 
-.content h1{
+.content h1 {
     font-size: 2.2rem;
     margin-bottom: 25px;
 }
 
-.content h2{
+.content h2 {
     font-size: 1.5rem;
     margin-top: 35px;
     margin-bottom: 15px;
@@ -53,7 +55,7 @@ body{
 
 /* Kódpélda */
 
-.code-example{
+.code-example {
     background-color: #f1f3f5;
     padding: 20px;
     border-radius: 6px;
@@ -62,50 +64,49 @@ body{
 
 /* Jobb oldali navigáció */
 
-.right-sidebar{
+.right-sidebar {
     padding: 30px 15px;
 }
 
-.right-sidebar ul{
+.right-sidebar ul {
     padding-left: 18px;
 }
 
-.right-sidebar li{
+.right-sidebar li {
     margin-bottom: 10px;
 }
 
-.right-sidebar a{
+.right-sidebar a {
     color: #495057;
     text-decoration: none;
 }
 
-.right-sidebar a:hover{
+.right-sidebar a:hover {
     color: #712cf9;
 }
 
-/* Lábléc */
+/* Lábléc — a középre igazítást a HTML text-center utility adja */
 
-.footer{
+.footer {
     border-top: 1px solid #dee2e6;
     padding: 25px;
-    text-align: center;
     color: #6c757d;
 }
 
-/* Mobilnézet */
+/* Mobilnézet — lg alatt (max 991px), összhangban a col-lg-* / navbar-expand-lg törésponttal */
 
 @media (max-width: 991px) {
-    .sidebar{
+    .sidebar {
         min-height: auto;
         border-right: none;
         border-bottom: 1px solid #dee2e6;
     }
 
-    .content{
+    .content {
         padding: 25px 15px;
     }
 
-    .right-sidebar{
+    .right-sidebar {
         border-top: 1px solid #dee2e6;
     }
 }
